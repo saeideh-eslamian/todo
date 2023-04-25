@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Register</title>
+    <link rel="stylesheet" href="{% static 'to-do/do-register.css' %}">
+</head>
+<body>
+ <section class='do-register-form'>
+    <form action="{% url 'do-register'%}"  method='POST' >
+        {% csrf_token %}
+        {% for field in to_do_form   %}
+            <p>{{ field.label }}</p>
+            <p>{{ field }}</p>
+            <p>{{ field.errors }}</p>
+        {% endfor %}
+        <button>Save</button>
+    </form>
+    <br><a href="{% url 'to-do' %}">Back</a>
+ </section>
+</body>
+</html>

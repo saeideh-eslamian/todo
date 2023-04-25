@@ -1,0 +1,95 @@
+.todo{
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    border: 2px solid;
+    border-radius: 15px;
+    border-color: rgb(76, 76, 164);
+    max-width: 500px;
+    margin-top: 3rem;
+}
+
+.head {
+    background-color: rgb(76, 76, 164);
+    color: aliceblue;
+    padding: 10px;
+    margin: 10px;
+}
+
+.todolist h3,p {
+    padding: 2px 10px;
+}
+.todolist li {
+    border: 1px solid;
+    background-color: rgb(185, 185, 243);
+    border-radius: 5px;
+    border-color: rgb(109, 109, 204);
+    padding: 0px 10px;
+    margin-right: 20px;
+    color: black;
+    list-style: none;
+    margin-top: 3px;
+    
+}
+
+.todolist button{
+    padding: 3px;
+    color: red;
+    border: 2px solid;
+    border-radius: 3px;
+    background-color: aliceblue;
+    border-color: rgb(208, 7, 14);
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.todolist a{
+    text-decoration: none;
+    color: rgb(33, 33, 34);
+}
+.todolist li:hover {
+                background-color: rgb(166, 166, 247);  
+            }
+#add{
+    align-items: center;
+    background-color: rgb(79, 32, 234); 
+    size: 20px;
+    border: 2px solid rgb(37, 2, 73);
+    border-radius: 15px;
+    padding: 5px;
+    margin: 5px;
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+#add:hover{
+   background-color: rgb(63, 18, 210); 
+}
+
+#search{
+    align-items: center;
+    background-color: rgb(185, 185, 243); 
+    border: 2px solid rgb(63, 18, 210);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 10px;
+    max-width: 50%;
+}
+
+.todocomplete{
+    background-color: rgb(245, 181, 181);
+    margin:10px;
+    border: 2px solid;
+    border-radius: 15px;
+    border-color: rgb(76, 76, 164);
+    margin-top: 1rem;
+    list-style: none;
+}
+.todolist2{
+    background-color: rgb(248, 248, 247);
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 15px;
+    border-color: rgb(76, 76, 164);
+    margin-top: 1rem;
+    list-style: none;
+}

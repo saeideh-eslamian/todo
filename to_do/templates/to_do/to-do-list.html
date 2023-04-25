@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO</title>
+    <link rel="stylesheet" href="{% static 'to-do/to-do-list.css' %}">
+</head>
+<body class='todo'>
+    <section class="head">
+        {% if user.is_authenticated %}
+        <p>Hi {{ user.username }}!</p> 
+        <p><a href="{% url 'logout' %}">Log Out</a></p>
+        {% else %}
+        <p>You are not logged in</p>
+        <a href="{% url 'login' %}">Log In</a>
+        {% endif %}
+    </section>
+    <div id='search'>
+        <form method="GET">
+            <input type="text" name="search" placeholder="Search">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <section class='todolist'>
+        <a href="{% url "do-register" %}" id="add">+ADD</a>
+    </section>    
+        <ul>
+            
+            {% for to_do in to_do_list %} 
+            <li class="{% if to_do.complete %}todocomplete{%else%} todolist2{%endif%}">  
+                <a href="{% url 'detail-do' to_do.id  %}">
+                    <h3>{{to_do.title}}</h3>
+                    <p id="l1">expiry date: {{to_do.expiry_date}} </p>
+                    <button><a href="{% url "update-do" to_do.id %}">Edit</a></button>
+                    <button><a href="{% url 'delete-do' to_do.id %}">&#215;</a></button>
+                    <span> {% if to_do.complete %}Complete{%else%}Not Complete{%endif%}</span>        
+                </a>
+            </li>
+            {% endfor %}
+        
+        </ul>
+</body>
+</html>
